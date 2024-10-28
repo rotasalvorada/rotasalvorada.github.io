@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 2em;
+        }
+        .route {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .sub-routes {
+            display: none;
+            margin-top: 10px;
+        }
+        a {
+            display: block;
+            margin: 8px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>Rotas</h1>
+
+    <div class="route">
+        <h2>Rotas de Oeiras</h2>
+        <h3 onclick="toggleSubRoutes('oeirasVazios')">Vazios</h3>
+        <div class="sub-routes" id="oeirasVazios">
+            <!-- Links configurados para abrir no OsmAnd -->
+            <a href="https://rotasalvorada.github.io/formacao/Vazio_Da_empresa_para__São_Marcos.gpx">Da empresa para São Marcos</a>
+            <a href="osmand:///open_gpx_track?url=file:///formacao/emulated/0/rotas/vazios/Vazio_M_Pombais_para_escola_secundária_Linda_velha.gpx">M. Pombal para Escola Secundária Linda-a-Velha</a>
+            <a href="osmand:///open_gpx_track?url=file:///formacao/oeiras/0/rotas/vazios/Vazio_campo_futebol_talaide_para_Empresa_20240925123120.gpx">Campo de Futebol Talaíde para Empresa</a>
+        </div>
+        <h3 onclick="toggleSubRoutes('oeirasCarreira1')">Carreira 1</h3>
+        <div class="sub-routes" id="oeirasCarreira1">
+            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/rotas/carreira1/Oeiras_Estacao1.gpx">Oeiras - Estação 1</a>
+            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/rotas/carreira1/Oeiras_Estacao2.gpx">Oeiras - Estação 2</a>
+        </div>
+        <!-- Repita para as demais carreiras -->
+    </div>
+
+    <div class="route">
+        <h2>Rotas de Sintra</h2>
+        <h3 onclick="toggleSubRoutes('sintraVazios')">Vazios</h3>
+        <div class="sub-routes" id="sintraVazios">
+            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/rotas/vazios/De_Sintra_para_Queluz.gpx">De Sintra para Queluz</a>
+            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/rotas/vazios/De_Sintra_para_Montelavar.gpx">De Sintra para Montelavar</a>
+        </div>
+        <h3 onclick="toggleSubRoutes('sintraCarreira1')">Carreira 1</h3>
+        <div class="sub-routes" id="sintraCarreira1">
+            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/rotas/carreira1/Sintra_Estacao1.gpx">Sintra - Estação 1</a>
+            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/rotas/carreira1/Sintra_Estacao2.gpx">Sintra - Estação 2</a>
+        </div>
+        <!-- Repita para as demais carreiras -->
+    </div>
+
+    <!-- Repita para outras localidades como Carcavelos, Queluz, etc. -->
+
+    <script>
+        function toggleSubRoutes(routeId) {
+            var subRoutes = document.getElementById(routeId);
+
+            if (subRoutes.style.display === "none" || subRoutes.style.display === "") {
+                subRoutes.style.display = "block";
+            } else {
+                subRoutes.style.display = "none";
+            }
+        }
+    </script>
+    
+</body>
+</html>
