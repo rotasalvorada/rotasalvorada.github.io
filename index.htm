@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotas Oeiras</title>
+    <title>Rotas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,9 +29,15 @@
             font-size: 1.5em;
             margin-top: 0;
         }
-        .variantes {
-            margin-top: 15px;
-            display: none; /* Oculta as rotas inicialmente */
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .sub-routes {
+            display: none;
+            margin-top: 10px;
         }
         a {
             display: block;
@@ -47,94 +53,63 @@
         a:hover {
             background-color: #0056b3;
         }
-        /* Estilos adicionais para dispositivos móveis */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            .route {
-                padding: 10px;
-            }
-            a {
-                font-size: 0.9em;
-                padding: 8px;
-            }
-        }
-        /* Estilo para o botão de expandir/recolher */
-        .toggle-button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-top: 15px;
-        }
-        .toggle-button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
 
-    <h1>Rotas Oeiras</h1>
+    <h1>Rotas</h1>
 
     <div class="route">
-        <h2>Vazios</h2>
-        <button class="toggle-button" onclick="toggleRoutes()">Mostrar todas as rotas</button>
-        <div class="variantes" id="routeList">
-            <a href="rotas/vazios/Vazio_Da_empresa_para__São_Marcos.gpx">Da empresa para São Marcos</a>
-            <a href="rotas/vazios/Vazio_M_Pombais_para_escola_secundária_Linda_velha.gpx">M. Pombal para Escola Secundária Linda-a-Velha</a>
-            <a href="rotas/vazios/Vazio_campo_futebol_talaide_para_Empresa_20240925123120.gpx">Campo de Futebol Talaíde para Empresa</a>
-            <a href="rotas/vazios/Vazio_da_Fábrica_da_Povora_para_empresa.gpx">Fábrica da Pólvora para Empresa</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Carcavelos_SBE_nova_universidade_de_Carcavelos_20241015144516.gpx">Da empresa para Carcavelos (SBE)</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Carnaxide_20241007140027.gpx">Da empresa para Carnaxide</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_M_Pombal_20241008102205.gpx">Da empresa para M. Pombal</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Marquês_de_pombal_via_C19_20241001141824.gpx">Da empresa para Marquês de Pombal via C19</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Porto_Salvo(sociedade_da_Musica)_20241010095440.gpx">Da empresa para Porto Salvo (Sociedade da Música)</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Queluz_Belas_20240925141825.gpx">Da empresa para Queluz-Belas</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_alges_20240930100153.gpx">Da empresa para Algés</a>
-            <a href="rotas/vazios/Vazio_de_Carnaxide_(avenida_Portugal_para_a_empresa_20241016163845.gpx">De Carnaxide (Avenida Portugal) para a Empresa</a>
-            <a href="rotas/vazios/Vazio_de_Carnaxide_para_linda__velha_20241001112603.gpx">De Carnaxide para Linda-a-Velha</a>
-            <a href="rotas/vazios/Vazio_do_campo_de_futebol_talaide_para_a_empresa_20241016171253.gpx">Do Campo de Futebol Talaíde para a Empresa</a>
-            <a href="rotas/vazios/vazio_da_Empresa_para__Campo_de_futebol_Talaide_20241016165213.gpx">Da Empresa para o Campo de Futebol Talaíde</a>
+        <h2>Rotas de Oeiras</h2>
+        <h3 onclick="toggleSubRoutes('oeirasVazios')">Vazios</h3>
+        <div class="sub-routes" id="oeirasVazios">
+            <a href="#">Da empresa para São Marcos</a>
+            <a href="#">Campo de Futebol Talaíde para Empresa</a>
+            <a href="#">Da empresa para Carcavelos (SBE)</a>
         </div>
+        <h3 onclick="toggleSubRoutes('oeirasCarreira1')">Carreira 1</h3>
+        <div class="sub-routes" id="oeirasCarreira1">
+            <a href="#">Oeiras - Estação 1</a>
+            <a href="#">Oeiras - Estação 2</a>
+        </div>
+        <h3 onclick="toggleSubRoutes('oeirasCarreira2')">Carreira 2</h3>
+        <div class="sub-routes" id="oeirasCarreira2">
+            <a href="#">Oeiras - Estação 1</a>
+            <a href="#">Oeiras - Estação 2</a>
+        </div>
+        <!-- Repita para as demais carreiras (3 a 9) -->
     </div>
 
-     <div class="route">
-        <h2>Vazios</h2>
-        <button class="toggle-button" onclick="toggleRoutes()">Mostrar todas as rotas</button>
-        <div class="variantes" id="routeList">
-            <a href="rotas/vazios/Vazio_Da_empresa_para__São_Marcos.gpx">Da empresa para São Marcos</a>
-            <a href="rotas/vazios/Vazio_M_Pombais_para_escola_secundária_Linda_velha.gpx">M. Pombal para Escola Secundária Linda-a-Velha</a>
-            <a href="rotas/vazios/Vazio_campo_futebol_talaide_para_Empresa_20240925123120.gpx">Campo de Futebol Talaíde para Empresa</a>
-            <a href="rotas/vazios/Vazio_da_Fábrica_da_Povora_para_empresa.gpx">Fábrica da Pólvora para Empresa</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Carcavelos_SBE_nova_universidade_de_Carcavelos_20241015144516.gpx">Da empresa para Carcavelos (SBE)</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Carnaxide_20241007140027.gpx">Da empresa para Carnaxide</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_M_Pombal_20241008102205.gpx">Da empresa para M. Pombal</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Marquês_de_pombal_via_C19_20241001141824.gpx">Da empresa para Marquês de Pombal via C19</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Porto_Salvo(sociedade_da_Musica)_20241010095440.gpx">Da empresa para Porto Salvo (Sociedade da Música)</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_Queluz_Belas_20240925141825.gpx">Da empresa para Queluz-Belas</a>
-            <a href="rotas/vazios/Vazio_da_empresa_para_alges_20240930100153.gpx">Da empresa para Algés</a>
-            <a href="rotas/vazios/Vazio_de_Carnaxide_(avenida_Portugal_para_a_empresa_20241016163845.gpx">De Carnaxide (Avenida Portugal) para a Empresa</a>
-            <a href="rotas/vazios/Vazio_de_Carnaxide_para_linda__velha_20241001112603.gpx">De Carnaxide para Linda-a-Velha</a>
-            <a href="rotas/vazios/Vazio_do_campo_de_futebol_talaide_para_a_empresa_20241016171253.gpx">Do Campo de Futebol Talaíde para a Empresa</a>
-            <a href="rotas/vazios/vazio_da_Empresa_para__Campo_de_futebol_Talaide_20241016165213.gpx">Da Empresa para o Campo de Futebol Talaíde</a>
+    <div class="route">
+        <h2>Rotas de Sintra</h2>
+        <h3 onclick="toggleSubRoutes('sintraVazios')">Vazios</h3>
+        <div class="sub-routes" id="sintraVazios">
+            <a href="#">De Sintra para Queluz</a>
+            <a href="#">De Sintra para Montelavar</a>
         </div>
+        <h3 onclick="toggleSubRoutes('sintraCarreira1')">Carreira 1</h3>
+        <div class="sub-routes" id="sintraCarreira1">
+            <a href="#">Sintra - Estação 1</a>
+            <a href="#">Sintra - Estação 2</a>
+        </div>
+        <h3 onclick="toggleSubRoutes('sintraCarreira2')">Carreira 2</h3>
+        <div class="sub-routes" id="sintraCarreira2">
+            <a href="#">Sintra - Estação 1</a>
+            <a href="#">Sintra - Estação 2</a>
+        </div>
+        <!-- Repita para as demais carreiras (3 a 9) -->
     </div>
-    
+
+    <!-- Repita para outras localidades como Carcavelos, Queluz, etc. -->
+
     <script>
-        function toggleRoutes() {
-            var routeList = document.getElementById("routeList");
-            var toggleButton = document.querySelector(".toggle-button");
+        function toggleSubRoutes(routeId) {
+            var subRoutes = document.getElementById(routeId);
 
-            if (routeList.style.display === "none" || routeList.style.display === "") {
-                routeList.style.display = "block";
-                toggleButton.textContent = "Fechar todas as rotas";
+            if (subRoutes.style.display === "none" || subRoutes.style.display === "") {
+                subRoutes.style.display = "block";
             } else {
-                routeList.style.display = "none";
-                toggleButton.textContent = "Mostrar todas as rotas";
+                subRoutes.style.display = "none";
             }
         }
     </script>
