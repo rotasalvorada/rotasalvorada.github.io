@@ -59,8 +59,11 @@
 
     <h1>Rotas</h1>
 
+   <h1>Rotas</h1>
+
     <div class="route">
         <h2>Rotas de Oeiras</h2>
+        <button class="toggle-button" onclick="toggleRoutes('oeirasRoutes')">Mostrar todas as rotas</button>
         <h3 onclick="toggleSubRoutes('oeirasVazios')">Vazios</h3>
         <div class="sub-routes" id="oeirasVazios">
             <a href="#">Da empresa para São Marcos</a>
@@ -72,34 +75,27 @@
             <a href="#">Oeiras - Estação 1</a>
             <a href="#">Oeiras - Estação 2</a>
         </div>
-        <h3 onclick="toggleSubRoutes('oeirasCarreira2')">Carreira 2</h3>
-        <div class="sub-routes" id="oeirasCarreira2">
-            <a href="#">Oeiras - Estação 1</a>
-            <a href="#">Oeiras - Estação 2</a>
-        </div>
-        <!-- Repita para as demais carreiras (3 a 9) -->
     </div>
 
     <div class="route">
         <h2>Rotas de Sintra</h2>
-        <h3 onclick="toggleSubRoutes('sintraVazios')">Vazios</h3>
-        <div class="sub-routes" id="sintraVazios">
+        <button class="toggle-button" onclick="toggleRoutes('sintraRoutes')">Mostrar todas as rotas</button>
+        <div class="variantes" id="sintraRoutes">
+            <!-- Links das rotas de Sintra -->
             <a href="#">De Sintra para Queluz</a>
             <a href="#">De Sintra para Montelavar</a>
         </div>
-        <h3 onclick="toggleSubRoutes('sintraCarreira1')">Carreira 1</h3>
-        <div class="sub-routes" id="sintraCarreira1">
-            <a href="#">Sintra - Estação 1</a>
-            <a href="#">Sintra - Estação 2</a>
-        </div>
-        <h3 onclick="toggleSubRoutes('sintraCarreira2')">Carreira 2</h3>
-        <div class="sub-routes" id="sintraCarreira2">
-            <a href="#">Sintra - Estação 1</a>
-            <a href="#">Sintra - Estação 2</a>
-        </div>
-        <!-- Repita para as demais carreiras (3 a 9) -->
     </div>
 
+    <div class="route">
+        <h2>Rotas de Carcavelos</h2>
+        <button class="toggle-button" onclick="toggleRoutes('carcavelosRoutes')">Mostrar todas as rotas</button>
+        <div class="variantes" id="carcavelosRoutes">
+            <!-- Links das rotas de Carcavelos -->
+            <a href="#">Da empresa para Carcavelos</a>
+            <a href="#">De Carcavelos para Algés</a>
+        </div>
+    </div>
     <!-- Repita para outras localidades como Carcavelos, Queluz, etc. -->
 
     <script>
