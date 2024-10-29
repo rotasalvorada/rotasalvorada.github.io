@@ -39,9 +39,14 @@
             display: none;
             margin-top: 10px;
         }
-        a {
-            display: block;
+        .link-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
             margin: 8px 0;
+        }
+        .link-container a {
+            display: inline-block;
             padding: 10px;
             background-color: #007bff;
             color: white;
@@ -50,7 +55,7 @@
             font-size: 1em;
             transition: background-color 0.3s;
         }
-        a:hover {
+        .link-container a:hover {
             background-color: #0056b3;
         }
     </style>
@@ -63,11 +68,14 @@
         <h2>Rotas de Oeiras</h2>
         <h3 onclick="toggleSubRoutes('oeirasVazios')">Vazios</h3>
         <div class="sub-routes" id="oeirasVazios">
-            <!-- Links configurados para abrir no OsmAnd -->
-            <a href="https://rotasalvorada.github.io/formacao/Vazio_Da_empresa_para__São_Marcos.gpx">Da empresa para São Marcos</a>
-            <a href="osmand:///open_gpx_track?url=file:///storage/emulated/dowload/0/rotas/vazios/Vazio_M_Pombais_para_escola_secundária_Linda_velha.gpx">M. Pombal para Escola Secundária Linda-a-Velha</a>
-            <a href="osmand:///open_gpx_track?url=file:///formacao/oeiras/0/rotas/vazios/Vazio_campo_futebol_talaide_para_Empresa_20240925123120.gpx">Campo de Futebol Talaíde para Empresa</a>
-        </div>
+            <div class="link-container">
+                <a href="/downloads/Vazio_Da_empresa_para_São_Marcos.gpx" download>Baixar</a>
+                <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/Download/Vazio_Da_empresa_para_São_Marcos.gpx">Abrir no OsmAnd</a>
+            </div>
+            <div class="link-container">
+                <a href="/downloads/Vazio_M_Pombais_para_escola_secundária_Linda_velha.gpx" download>Baixar</a>
+                <a href="osmand:///open_gpx_track?url=file:///storage/emulated/0/Download/Vazio_M_Pombais_para_escola_secundária_Linda_velha.gpx">Abrir no OsmAnd</a>
+            </div>
         <h3 onclick="toggleSubRoutes('oeirasCarreira1')">Carreira 1</h3>
         <div class="sub-routes" id="oeirasCarreira1">
             <a href="osmand:///open_gpx_track?url=file:///storage/emulated/Dowload/0/rotas/carreira1/Oeiras_Estacao1.gpx">Oeiras - Estação 1</a>
