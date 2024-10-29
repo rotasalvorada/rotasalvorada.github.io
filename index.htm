@@ -64,22 +64,17 @@
     </style>
 </head>
 <body>
-    
-   <h1>Rotas</h1>
+
+    <h1>Rotas</h1>
 
     <div class="route">
         <h2>Rotas de Oeiras</h2>
         <button class="toggle-button" onclick="toggleRoutes('oeirasRoutes')">Mostrar todas as rotas</button>
-        <h3 onclick="toggleSubRoutes('oeirasVazios')">Vazios</h3>
-        <div class="sub-routes" id="oeirasVazios">
+        <div class="variantes" id="oeirasRoutes">
+            <!-- Links das rotas de Oeiras -->
             <a href="#">Da empresa para São Marcos</a>
             <a href="#">Campo de Futebol Talaíde para Empresa</a>
             <a href="#">Da empresa para Carcavelos (SBE)</a>
-        </div>
-        <h3 onclick="toggleSubRoutes('oeirasCarreira1')">Carreira 1</h3>
-        <div class="sub-routes" id="oeirasCarreira1">
-            <a href="#">Oeiras - Estação 1</a>
-            <a href="#">Oeiras - Estação 2</a>
         </div>
     </div>
 
@@ -102,16 +97,30 @@
             <a href="#">De Carcavelos para Algés</a>
         </div>
     </div>
-    <!-- Repita para outras localidades como Carcavelos, Queluz, etc. -->
+
+    <div class="route">
+        <h2>Rotas de Queluz</h2>
+        <button class="toggle-button" onclick="toggleRoutes('queluzRoutes')">Mostrar todas as rotas</button>
+        <div class="variantes" id="queluzRoutes">
+            <!-- Links das rotas de Queluz -->
+            <a href="#">De Queluz para Amadora</a>
+            <a href="#">De Queluz para Cacém</a>
+        </div>
+    </div>
+
+    <!-- Adicione mais seções para outras localidades, como Amadora, Cacém, Montelavar, etc. -->
 
     <script>
-        function toggleSubRoutes(routeId) {
-            var subRoutes = document.getElementById(routeId);
+        function toggleRoutes(routeId) {
+            var routeList = document.getElementById(routeId);
+            var toggleButton = routeList.previousElementSibling;
 
-            if (subRoutes.style.display === "none" || subRoutes.style.display === "") {
-                subRoutes.style.display = "block";
+            if (routeList.style.display === "none" || routeList.style.display === "") {
+                routeList.style.display = "block";
+                toggleButton.textContent = "Fechar todas as rotas";
             } else {
-                subRoutes.style.display = "none";
+                routeList.style.display = "none";
+                toggleButton.textContent = "Mostrar todas as rotas";
             }
         }
     </script>
