@@ -29,15 +29,9 @@
             font-size: 1.5em;
             margin-top: 0;
         }
-        h3 {
-            color: #333;
-            font-size: 1.2em;
-            cursor: pointer;
-            margin: 10px 0;
-        }
-        .sub-routes {
-            display: none;
-            margin-top: 10px;
+        .variantes {
+            margin-top: 15px;
+            display: none; /* Oculta as rotas inicialmente */
         }
         a {
             display: block;
@@ -51,6 +45,20 @@
             transition: background-color 0.3s;
         }
         a:hover {
+            background-color: #0056b3;
+        }
+        /* Estilo para o botão de expandir/recolher */
+        .toggle-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+        .toggle-button:hover {
             background-color: #0056b3;
         }
     </style>
