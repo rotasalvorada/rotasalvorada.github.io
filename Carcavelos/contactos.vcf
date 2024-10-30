@@ -1,0 +1,78 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:CCO_Adroana
+N:;CCO_Adroana;;;
+item1.TEL:932 424 110
+item1.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:CCO_Cacem
+N:;CCO_Cacem;;;
+item1.TEL:932 428 821
+item1.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:CCO_Montelavar
+N:;CCO_Montelavar;;;
+item1.TEL:932 439 489
+item1.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:CCO_Queluz
+N:;CCO_Queluz;;;
+item1.TEL:932 439 482
+item1.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Gestão_Financeira
+N:;Gestão_Financeira;;;
+item1.EMAIL;TYPE=INTERNET:gfc_cc@viacaoalvorada.pt
+item1.X-ABLabel:
+item2.TEL:936 207 726
+item2.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Gestão_Pessoas
+N:;Gestão_Pessoas;;;
+item1.EMAIL;TYPE=INTERNET:gestaopessoas@viacaoalvorada.pt
+item1.X-ABLabel:
+item2.TEL:931 626 900
+item2.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Medicina_Trabalho
+N:;Medicina_Trabalho;;;
+item1.EMAIL;TYPE=INTERNET:gestaopessoas@viacaoalvorada.pt
+item1.X-ABLabel:
+item2.TEL:931 626 914
+item2.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Refeitorio_Adroana
+N:;Refeitorio_Adroana;;;
+item1.TEL:21 469 9151
+item1.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Refeitorio_Queluz
+N:;Refeitorio_Queluz;;;
+item1.TEL:938 020 441
+item1.X-ABLabel:
+CATEGORIES:VA,myContacts
+END:VCARD
